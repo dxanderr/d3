@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+:root {
+    --font: "Bebas Neue";
+    --html-bg: #c3ceda;
+    --svg-bg: #738fa7;
+    --lint: #bacc81;
+    --emerald-green: #478c5c;
+    --box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+html {
+    height: 100%;
+    font-family: var(--font), sans-serif;
+    background: var(--html-bg);
+}
+
+body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+svg {
+    margin-top: 40px;
+    background-color: var(--svg-bg);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+}
+
+.dot{
+    stroke: #000;
+}
+
+#title{
+    font-size: 1.75rem;
+}
+
+#tooltip{
+    margin: -30px;
+    visibility: hidden;
+    width: auto;
+    height: auto;
+}
+
+#legend{
+    position: absolute;
+    top: 45%;
+    right: 20%;
+}
+
+.doping,
+.not-doping{
+    position: relative;
+}
+
+.doping{
+    margin-bottom: 5px;
+}
+
+.doping::before,
+.not-doping::before{
+    content: "";
+    position: absolute;
+    height: 12px;
+    width: 12px;
+    top: 3px;
+    left: -20px;
+}
+
+.doping::before{
+    background: #922c40;
+}
+
+.not-doping::before{
+    background: lightgreen;
+}
+
